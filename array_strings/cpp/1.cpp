@@ -2,6 +2,7 @@
 #include <map>
 #include <utility>
 
+/* O(n) */
 bool isUniqueWithHashTable (std::string word) {
   std::map<char,int> hashTable;
   for(char character : word) {
