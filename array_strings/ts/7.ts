@@ -1,7 +1,9 @@
+
+// O(n2)
 const matrixRotate = (image: number[][]) => {
   const size = image.length;
-  for (let i = 0; i < Math.floor(size/2); i++) {
-    for (let j = i; j < size - i - 1; j++) {
+  for (let i = 0; i < Math.floor(size/2); i++) { // O(n/2)
+    for (let j = i; j < size - i - 1; j++) { // O(3n/2)
       const aux = image[i][j];
       image[i][j] = image[j][size - i - 1];
       image[j][size - i - 1] = image[size - i - 1][size - j - 1];
